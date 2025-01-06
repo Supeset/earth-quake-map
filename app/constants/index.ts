@@ -1,2 +1,2 @@
-export const appName = 'Vitesse for Nuxt 3'
-export const appDescription = 'Vitesse for Nuxt 3'
+export const appName = '地震地图 - 万物地图'
+export const appDescription = '地震地图 earth quake map'

@@ -9,6 +9,9 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
     '@nuxt/eslint',
+    'arco-design-nuxt-module',
+    'nuxt-lodash',
+    'dayjs-nuxt',
   ],
 
   devtools: {
@@ -19,9 +22,7 @@ export default defineNuxtConfig({
     head: {
       viewport: 'width=device-width,initial-scale=1',
       link: [
-        { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
-        { rel: 'icon', type: 'image/svg+xml', href: '/nuxt.svg' },
-        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' },
       ],
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -65,6 +66,18 @@ export default defineNuxtConfig({
       crawlLinks: false,
       routes: ['/'],
       ignore: ['/hi'],
+    },
+  },
+
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@arco-design/web-vue/es/divider/style/css.js',
+        '@arco-design/web-vue/es/trigger/style/css.js',
+        '@arco-design/web-vue/es/radio/style/css.js',
+        'maplibre-gl',
+        '@arco-design/web-vue/es/checkbox/style/css.js',
+      ],
     },
   },
 
